@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"></h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <P>Software Engineer</P>
+                <h1>Hi,I'm <span>Moe Win </span> <br> From Myanmar</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                         Sed nulla sapiente, est quibusdam asperiores aspernatur error voluptate,
+                          harum reprehenderit quae quo necessitatibus 
+                          corporis sint ad vitae cum, nemo quas nostrum?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Repudiandae labore voluptatem neque accusamus reiciendis nemo veritatis autem dolor eum architecto
+                         nobis iure minus a alias, impedit voluptatibus! Molestias, sequi ullam.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-link" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab " id="skills">
+                            <ul>
+                                <li><span>HTML/CSS</span><br>Desgining Website</li>
+                                <li><span>JavaScript</span><br>Desgining Website</li>
+                                <li><span>Java</span><br>BackedEnd</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Nothing Experience</span><br>Trying my best</li>
+                               
+                               
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>School</span><br>No(1)BEHS Mawlamyine</li>
+                                <li><span>University</span><br>University of Computer Studies thaton</li>
+                                
+                               
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-link");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        
+
+    </script>
+
+    
+</body>
+</html>
